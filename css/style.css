@@ -9,6 +9,7 @@
 
 html, body {
   height: 100%;
+  
 }
 
 body {
@@ -25,6 +26,10 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  width: 90%;
+  margin: 30px auto;
+  
+
 }
 
 .content {
@@ -41,16 +46,12 @@ a:hover {
 }
 
 /* Container */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 
 /* Top Bar Styles */
 .top-nav {
-  background-color: #111;
-  color: #ccc;
+  /* background-color: white; */
+  color: #000000;
   font-size: 0.9rem;
   padding: 0.4rem 0;
 }
@@ -65,7 +66,7 @@ a:hover {
 }
 
 .top-nav-menu li a {
-  color: #ccc;
+  color: rgb(64, 62, 62);
   text-decoration: none;
   transition: color 0.3s;
   padding: 5px 10px;
@@ -74,24 +75,24 @@ a:hover {
 
 .top-nav-menu li a:hover {
   background-color: #444;
-  color: #fff;
+  color: black;
 }
 
 /* Main Navbar Styles */
 .navbar {
-  background-color: #222;
-  color: #fff;
+  /* background-color: white; */
+  color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  
 }
 
 .navbar-brand {
   font-weight: bold;
   font-size: 1.5rem;
-  color: #fff;
+  color: black;
   padding-left: 0.5rem;
   text-decoration: none;
 }
@@ -105,7 +106,7 @@ a:hover {
 }
 
 .navbar-menu li a {
-  color: #ccc;
+  color: rgb(64, 62, 62);
   padding: 0.5rem 0.6rem;
   border-radius: 4px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -114,8 +115,49 @@ a:hover {
 .navbar-menu li a.active,
 .navbar-menu li a:hover {
   background-color: #444;
-  color: #fff;
+  color: black;
 }
+
+
+/* dropdown menu settings */
+/* Position and hide */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #333;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 160px;
+  z-index: 1000;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #444;
+}
+
+/* Show on hover (desktop) */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Show on click when `.open` class is toggled (mobile/touch) */
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+/* Positioning the dropdown relative to parent */
+.dropdown {
+  position: relative;
+}
+
 
 /* Hero Section */
 .hero {
@@ -376,6 +418,58 @@ hr {
   margin-bottom: 1rem;
   color: #222;
 }
+
+/* footer */
+footer{
+    background: black;
+     padding: 40px 0;
+     color: white;
+}
+.footer-content{
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+.footer-section ul li {
+  margin-bottom: 6px;
+  color: white;
+}
+
+.footer-section ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #007bff;
+}
+
+
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 767.98px) {
+  .footer-tittle h4 {
+    font-size: 1rem;
+  }
+  .footer-tittle ul li {
+    font-size: 0.9rem;
+  }
+}
+
 
 /* Responsive Adjustments */
 @media (max-width: 600px) {

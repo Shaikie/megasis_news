@@ -6,88 +6,455 @@
   <title>Megasis - Home</title>
   <link rel="stylesheet" href="css/style.css"> 
   <link rel="stylesheet" href="css/home.css">
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-  
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
 <body>
 
 <!-- Top Bar --><div class="wrapper">
 <div class="top-nav">
-  <div class="container">
-    <ul class="top-nav-menu">
-      <li><a href="#">Sign In</a></li>
-      <li><a href="#">Sign Up</a></li>
-      <li><a href="#">Search</a></li>
-    </ul>
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center;   width: 90%;   ">
+    <a href="#" class="navbar-brand">Megasis</a>
+    <!-- Left: Auth Links -->
+   
+
+    <!-- Right: Social Icons -->
+    <div class="top-nav-social" style="display: flex; gap: 15px; idth: 90%;   margin: 30px auto;">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-"></i></a>
+    </div>
+
   </div>
+  <hr style="height: 1px; width: 98%;  margin: 30px auto;  border-radius: 2px;  ">
 </div>
 
 <!-- Main Navbar -->
 <nav class="navbar">
   <div class="container">
-    <a href="#" class="navbar-brand">Megasis</a>
+    
     <ul class="navbar-menu">
       <li><a href="index.html">Home</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="category.html">Category</a></li>
-      <li><a href="contact.html">Contact</a></li>
+
+      <li class="dropdown">
+  <a href="#" id="pageDropdownToggle">Page ▾</a>
+  <ul class="dropdown-menu">
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="team.html">Our Team</a></li>
+    <li><a href="faq.html">FAQs</a></li>
+  </ul>
+</li>
+
+
+      <li><a href="science.html">Science</a></li>
+      <li><a href="technology.html">Technology</a></li>
+      <li><a href="beauty.html">Beauty</a></li>
+      <li><a href="health.html">Health</a></li>
+      <li><a href="arts.html">Arts & Culture</a></li>
+      <li><a href="opinion.html">Opinion</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
     </ul>
   </div>
 </nav>
+<hr class="custom-hr">
 </div>
 
-<!-- Hero Section -->
-<section class="py-5 text-center bg-light">
-  <div class="container">
-    <h1 class="display-5">Top Stories</h1>
-    <p class="lead">Latest news and updates from around the world</p>
-  </div>
-</section>
-
 <!-- Post Cards -->
-<div class="container my-4">
-  <div class="row g-4">
-    <div class="col-md-4">
-      <div class="post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image">
+
+  <div class="container">
+       
+
+        <div class="grid-container">
+            <div class="card large-card">
+                <div class="card-overlay">
+                    
+                    <h2 class="card-title">A facere sequi eos quaerat</h2>
+
+                
+                    <p class="card-text">At dolor nesciunt enim quod et est eligendi similique quod Nam ipsum aut adipisci Aut officia cumque et reprehenderit atque aut ut omnis sed deleniti natus at et corporis voluptatibus...</p>
+                    
+                    <a href="#" class="read-more">Read More <span class="arrow">&rarr;</span></a>
+              </div>
+            </div>
+            <div class="card large-card-2">
+                <div class="card-overlay">
+                    
+                    <h2 class="card-title">A facere sequi eos quaerat</h2>
+
+                
+                    <p class="card-text">At dolor nesciunt enim quod et est eligendi similique quod Nam ipsum aut adipisci Aut officia cumque et reprehenderit atque aut ut omnis sed deleniti natus at et corporis voluptatibus...</p>
+                    
+                    <a href="#" class="read-more">Read More <span class="arrow">&rarr;</span></a>
+              </div>
+            </div>
+
+                <div class="small-card-1 card">
+                    <img src="images/pexels-meomupmofilm-2153775418-32965518.jpg" alt="Cityscape at sunset">
+                    <div class="small-card-content">
+                        <h3 class="small-card-title">A ut illum sint</h3>
+                        <p class="small-card-text">Dolorem fugiat temporibus. Sit provident rerum.</p>
+                        <a href="#" class="read-more-right">Read More <span class="arrow">&rarr;</span></a>
+                    </div>
+                </div>
+
+                <div class="small-card-2 card">
+                    <img src="images/pexels-meomupmofilm-2153775418-32965518.jpg" alt="Autumn forest path">
+                    <div class="small-card-content">
+                        <h3 class="small-card-title">Earum et beatae sit</h3>
+                        <p class="small-card-text">Consequuntur facere commodi expedita rerum eveniet. Vel et eos cum placeat. Qui...</p>
+                        <a href="#" class="read-more-right">Read More <span class="arrow">&rarr;</span></a>
+                    </div>
+                </div>
+                <div class="small-card-3 card">
+  <img src="images/pexels-meomupmofilm-2153775418-32965518.jpg" alt="Autumn forest path">
+  <div class="small-card-content">
+    <h3 class="small-card-title">Earum et beatae sit</h3>
+    <p class="small-card-text">Consequuntur facere commodi expedita rerum eveniet. Vel et eos cum placeat. Qui...</p>
+    <a href="#" class="read-more-right">Read More <span class="arrow">&rarr;</span></a>
+  </div>
+</div>
+
+                
+            </div>
+        </div>
+    </div>
+<hr class="custom-hr">
+
+ 
+
+ <!-- container-2 -->
+     <div class="container-2 container-1">
+    <!-- Main Posts -->
+    <main class="posts-grid">
+      <article class="post-card">
+        <img src="https://via.placeholder.com/400x200" alt="News image" />
         <div class="content">
           <h5>Politics in 2025</h5>
           <p class="text-muted">July 30, 2025 by Admin</p>
           <p>Quick recap of the major political changes and reforms in recent months...</p>
-          <a href="post_details.html" class="btn btn-sm btn-outline-primary">Read More</a>
+          <a href="post_details.html" class="btn">Read More</a>
         </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image">
+      </article>
+      <article class="post-card">
+        <img src="https://via.placeholder.com/400x200" alt="News image" />
         <div class="content">
           <h5>Tech Advances</h5>
           <p class="text-muted">July 28, 2025 by Tech Editor</p>
           <p>Explore the future of AI, robotics, and smart devices shaping industries...</p>
-          <a href="post_details.html" class="btn btn-sm btn-outline-primary">Read More</a>
+          <a href="post_details.html" class="btn">Read More</a>
         </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image">
-        <div class="content">
-          <h5>Sports Update</h5>
-          <p class="text-muted">July 26, 2025 by Sports Team</p>
-          <p>Highlights and scores from the latest football and athletics competitions...</p>
-          <a href="post_details.html" class="btn btn-sm btn-outline-primary">Read More</a>
-        </div>
-      </div>
-    </div>
+      </article>
+      
+  
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <section class="widget categories">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="category.html">Technology</a></li>
+          <li><a href="category.html">Politics</a></li>
+          <li><a href="category.html">Business</a></li>
+          <li><a href="category.html">Sports</a></li>
+        </ul>
+      </section>
+
+      <section class="widget recent-posts">
+        <h4>Recent Posts</h4>
+        <ul>
+          <li><a href="blog_details.html">Startup Growth in 2025</a></li>
+          <li><a href="blog_details.html">New Tech Trends</a></li>
+        </ul>
+      </section>
+
+      <!-- Add more widgets here if you want -->
+    </aside>
+    </main>
   </div>
-</div>
+  
+  <hr class="custom-hr">
+
+
+<!-- container 3 -->
+  <div class="container-1">
+    <!-- Main Posts -->
+    <main class="posts-grid">
+      <article class="post-card">
+        <img src="https://via.placeholder.com/400x200" alt="News image" />
+        <div class="content">
+          <h5>Politics in 2025</h5>
+          <p class="text-muted">July 30, 2025 by Admin</p>
+          <p>Quick recap of the major political changes and reforms in recent months...</p>
+          <a href="post_details.html" class="btn">Read More</a>
+        </div>
+      </article>
+      <article class="post-card">
+        <img src="https://via.placeholder.com/400x200" alt="News image" />
+        <div class="content">
+          <h5>Tech Advances</h5>
+          <p class="text-muted">July 28, 2025 by Tech Editor</p>
+          <p>Explore the future of AI, robotics, and smart devices shaping industries...</p>
+          <a href="post_details.html" class="btn">Read More</a>
+        </div>
+      </article>
+      
+  
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <section class="widget categories">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="category.html">Technology</a></li>
+          <li><a href="category.html">Politics</a></li>
+          <li><a href="category.html">Business</a></li>
+          <li><a href="category.html">Sports</a></li>
+        </ul>
+      </section>
+
+      <section class="widget recent-posts">
+        <h4>Recent Posts</h4>
+        <ul>
+          <li><a href="blog_details.html">Startup Growth in 2025</a></li>
+          <li><a href="blog_details.html">New Tech Trends</a></li>
+        </ul>
+      </section>
+
+      <!-- Add more widgets here if you want -->
+    </aside>
+    </main>
+  </div>
+
+<hr class="custom-hr">
+
+  <!-- container-4 -->
+     <div class="container-2 container-1">
+    <!-- Main Posts -->
+    <main class="posts-grid">
+      <article class="post-card">
+        <img src="https://via.placeholder.com/400x200" alt="News image" />
+        <div class="content">
+          <h5>Politics in 2025</h5>
+          <p class="text-muted">July 30, 2025 by Admin</p>
+          <p>Quick recap of the major political changes and reforms in recent months...</p>
+          <a href="post_details.html" class="btn">Read More</a>
+        </div>
+      </article>
+      <article class="post-card">
+        <img src="https://via.placeholder.com/400x200" alt="News image" />
+        <div class="content">
+          <h5>Tech Advances</h5>
+          <p class="text-muted">July 28, 2025 by Tech Editor</p>
+          <p>Explore the future of AI, robotics, and smart devices shaping industries...</p>
+          <a href="post_details.html" class="btn">Read More</a>
+        </div>
+      </article>
+      
+  
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <section class="widget categories">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="category.html">Technology</a></li>
+          <li><a href="category.html">Politics</a></li>
+          <li><a href="category.html">Business</a></li>
+          <li><a href="category.html">Sports</a></li>
+        </ul>
+      </section>
+
+      <section class="widget recent-posts">
+        <h4>Recent Posts</h4>
+        <ul>
+          <li><a href="blog_details.html">Startup Growth in 2025</a></li>
+          <li><a href="blog_details.html">New Tech Trends</a></li>
+        </ul>
+      </section>
+
+      <!-- Add more widgets here if you want -->
+    </aside>
+    </main>
+  </div>
+
+
+
+ <hr class="custom-hr">
+ 
+
+ <!-- container 5 -->
+ <div class="container-1">
+    <!-- Main Posts -->
+    <main class="posts-grid">
+      <article class="post-card">
+        <img src="https://via.placeholder.com/400x200" alt="News image" />
+        <div class="content">
+          <h5>Politics in 2025</h5>
+          <p class="text-muted">July 30, 2025 by Admin</p>
+          <p>Quick recap of the major political changes and reforms in recent months...</p>
+          <a href="post_details.html" class="btn">Read More</a>
+        </div>
+      </article>
+      <article class="post-card">
+        <img src="https://via.placeholder.com/400x200" alt="News image" />
+        <div class="content">
+          <h5>Tech Advances</h5>
+          <p class="text-muted">July 28, 2025 by Tech Editor</p>
+          <p>Explore the future of AI, robotics, and smart devices shaping industries...</p>
+          <a href="post_details.html" class="btn">Read More</a>
+        </div>
+      </article>
+      
+  
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <section class="widget categories">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="category.html">Technology</a></li>
+          <li><a href="category.html">Politics</a></li>
+          <li><a href="category.html">Business</a></li>
+          <li><a href="category.html">Sports</a></li>
+        </ul>
+      </section>
+
+      <section class="widget recent-posts">
+        <h4>Recent Posts</h4>
+        <ul>
+          <li><a href="blog_details.html">Startup Growth in 2025</a></li>
+          <li><a href="blog_details.html">New Tech Trends</a></li>
+        </ul>
+      </section>
+
+      <!-- Add more widgets here if you want -->
+    </aside>
+    </main>
+  </div>
+
+<hr class="custom-hr">
+
+
+<!-- container 6 -->
+<div class="container-1">
+    <!-- Main Posts -->
+    <main class="posts-grid">
+      <article class="post-card">
+        <img src="https://via.placeholder.com/400x200" alt="News image" />
+        <div class="content">
+          <h5>Politics in 2025</h5>
+          <p class="text-muted">July 30, 2025 by Admin</p>
+          <p>Quick recap of the major political changes and reforms in recent months...</p>
+          <a href="post_details.html" class="btn">Read More</a>
+        </div>
+      </article>
+      <article class="post-card">
+        <img src="https://via.placeholder.com/400x200" alt="News image" />
+        <div class="content">
+          <h5>Tech Advances</h5>
+          <p class="text-muted">July 28, 2025 by Tech Editor</p>
+          <p>Explore the future of AI, robotics, and smart devices shaping industries...</p>
+          <a href="post_details.html" class="btn">Read More</a>
+        </div>
+      </article>
+      
+  
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <section class="widget categories">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="category.html">Technology</a></li>
+          <li><a href="category.html">Politics</a></li>
+          <li><a href="category.html">Business</a></li>
+          <li><a href="category.html">Sports</a></li>
+        </ul>
+      </section>
+
+      <section class="widget recent-posts">
+        <h4>Recent Posts</h4>
+        <ul>
+          <li><a href="blog_details.html">Startup Growth in 2025</a></li>
+          <li><a href="blog_details.html">New Tech Trends</a></li>
+        </ul>
+      </section>
+
+      <!-- Add more widgets here if you want -->
+    </aside>
+    </main>
+  </div>
+
+
+
+
+
+
 
 <!-- Footer -->
-<footer class="bg-dark text-white text-center py-3">
-  <p class="mb-0">practical training project<a href="https://colorlib.com" target="_blank" style="color:#ccc;">TERNET</a></p>
+<footer>
+  <div class="footer-content">
+
+    <!-- About -->
+    <div class="footer-section">
+      <h4>About</h4>
+      <ul>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Mission</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">News</a></li>
+      </ul>
+    </div>
+
+    <!-- Categories 1 -->
+    <div class="footer-section">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Tips & Tricks</a></li>
+      </ul>
+    </div>
+
+    <!-- Categories 2 -->
+    <div class="footer-section">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Tips & Tricks</a></li>
+      </ul>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Privacy Statement</a></li>
+        <li><a href="#">Use of cookies</a></li>
+        <li><a href="#">International Editions</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div style="text-align: center; padding-top: 20px; font-size: 14px;">
+    <p>
+      &copy;<script>document.write(new Date().getFullYear());</script> 2025 All rights reserved | Made with 
+      <i class="fa fa-heart color-danger" aria-hidden="true"></i> by 
+      <a href="https://colorlib.com" target="_blank" rel="nofollow noopener">TERNET</a>
+    </p>
+  </div>
 </footer>
+
 
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
 </body>
