@@ -1,0 +1,137 @@
+/* category.css */
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Nav and Navbar assumed styled in style.css */
+
+/* Category Header */
+h2.mb-4 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #007bff;
+  text-align: center;
+}
+
+/* Posts Container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.col-md-4 {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+}
+
+.col-md-8 {
+  flex: 0 0 66.666%;
+  max-width: 66.666%;
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .col-md-4, .col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Images */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+  transition: box-shadow 0.3s ease;
+}
+
+.img-fluid:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* Post Titles */
+h5 {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  color: #007bff;
+}
+
+h5 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+h5 a:hover {
+  color: #0056b3;
+}
+
+/* Meta Info */
+.text-muted {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Paragraph */
+p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #222;
+  color: #aaa;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}

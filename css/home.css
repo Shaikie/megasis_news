@@ -1,0 +1,174 @@
+/* home.css */
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Hero Section */
+.py-5 {
+  padding: 3rem 0;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.py-5 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.py-5 p.lead {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Grid System Replacement for row and col-md-4 */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 0 -0.75rem; /* compensate for col padding */
+}
+
+.col-md-4 {
+  flex: 0 0 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .col-md-4 {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Post Card */
+
+.post-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.post-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.post-card .content {
+  padding: 1rem 1.25rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card h5 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #007bff;
+}
+
+.post-card h5 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.post-card h5 a:hover {
+  color: #0056b3;
+}
+
+.text-muted {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.post-card p {
+  flex-grow: 1;
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  align-self: flex-start;
+  background-color: transparent;
+  border: 1.5px solid #007bff;
+  color: #007bff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #222;
+  color: #aaa;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}
