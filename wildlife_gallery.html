@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Giant Guardian</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            overflow-x: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-showcase {
+            position: relative;
+            width: 90%;
+            max-width: 1200px;
+            height: 600px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .main-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .main-image.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .main-image.inactive {
+            opacity: 0;
+            transform: scale(1.1);
+        }
+
+        .content-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 60px;
+            z-index: 10;
+        }
+
+        .title {
+            font-size: 4rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out 0.8s forwards;
+        }
+
+        .btn-explore {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out 1.1s forwards;
+        }
+
+        .btn-explore:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-queue {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 20;
+        }
+
+        .queue-item {
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            opacity: 0.7;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .queue-item:hover {
+            transform: scale(1.1);
+            opacity: 1;
+            border-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .queue-item.active {
+            border-color: #fff;
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .queue-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent);
+            transition: opacity 0.3s ease;
+        }
+
+        .queue-item:hover::before {
+            opacity: 0;
+        }
+
+        .navigation {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 20;
+        }
+
+        .nav-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content-overlay {
+                padding: 40px 30px;
+            }
+            
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .gallery-queue {
+                right: 20px;
+                gap: 10px;
+            }
+            
+            .queue-item {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-showcase">
+            <div class="main-image active" id="mainImage"></div>
+            
+            <div class="content-overlay">
+                <h1 class="title" id="mainTitle">THE GIANT GUARDIAN</h1>
+                <p class="subtitle" id="mainSubtitle">Silent strength and ancient wisdom walking the wild paths</p>
+                <button class="btn-explore">Explore More</button>
+            </div>
+
+            <div class="gallery-queue">
+                <div class="queue-item active" data-index="0"></div>
+                <div class="queue-item" data-index="1"></div>
+                <div class="queue-item" data-index="2"></div>
+                <div class="queue-item" data-index="3"></div>
+            </div>
+
+            <div class="navigation">
+                <button class="nav-btn" id="prevBtn">‹</button>
+                <button class="nav-btn" id="nextBtn">›</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const images = [
+            {
+                url: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+                title: 'THE GIANT GUARDIAN',
+                subtitle: 'Silent strength and ancient wisdom walking the wild paths'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+                title: 'THE SPOTTED HUNTER',
+                subtitle: 'Grace and power embodied in nature\'s perfect predator'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1546026423-cc4642628d2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+                title: 'THE GOLDEN KING',
+                subtitle: 'Majestic ruler of the savanna with untamed spirit'
+            },
+            {
+                url: 'https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+                title: 'THE SOARING SENTINEL',
+                subtitle: 'Wings spread wide, surveying the endless horizon'
+            }
+        ];
+
+        let currentIndex = 0;
+        const mainImage = document.getElementById('mainImage');
+        const mainTitle = document.getElementById('mainTitle');
+        const mainSubtitle = document.getElementById('mainSubtitle');
+        const queueItems = document.querySelectorAll('.queue-item');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+
+        function initializeGallery() {
+            images.forEach((image, index) => {
+                queueItems[index].style.backgroundImage = `url(${image.url})`;
+                queueItems[index].addEventListener('click', () => switchToImage(index));
+            });
+            
+            switchToImage(0);
+        }
+
+        function switchToImage(index) {
+            if (index === currentIndex) return;
+            
+            // Update main image with transition
+            mainImage.classList.add('inactive');
+            
+            setTimeout(() => {
+                mainImage.style.backgroundImage = `url(${images[index].url})`;
+                mainTitle.textContent = images[index].title;
+                mainSubtitle.textContent = images[index].subtitle;
+                mainImage.classList.remove('inactive');
+                mainImage.classList.add('active');
+            }, 400);
+
+            // Update queue items
+            queueItems[currentIndex].classList.remove('active');
+            queueItems[index].classList.add('active');
+            
+            currentIndex = index;
+        }
+
+        function nextImage() {
+            const nextIndex = (currentIndex + 1) % images.length;
+            switchToImage(nextIndex);
+        }
+
+        function prevImage() {
+            const prevIndex = (currentIndex - 1 + images.length) % images.length;
+            switchToImage(prevIndex);
+        }
+
+        nextBtn.addEventListener('click', nextImage);
+        prevBtn.addEventListener('click', prevImage);
+
+        // Auto-advance every 8 seconds
+        setInterval(nextImage, 8000);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+
+        // Initialize the gallery
+        initializeGallery();
+    </script>
+</body>
+</html>
