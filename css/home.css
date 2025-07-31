@@ -19,6 +19,227 @@ body {
   /* flex-direction: column; */
 }
 
+/* header section */
+
+/* Reset some default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  font-family: Arial, sans-serif;
+}
+
+/* Header top area */
+.header-area {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-top {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  display: block;
+  align-self: flex-start;
+}
+
+.header-info-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  
+  margin-left: auto;
+  
+}
+
+.header-info-right ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.header-info-right ul li a.header-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid #007bff;
+  color: #007bff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-info-right ul li a.header-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Social icons */
+.header-social a {
+  color: #555;
+  margin-left: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header-social a:hover {
+  color: #007bff;
+}
+
+/* Header bottom */
+.header-bottom {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header-bottom .container-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.bottom-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+/* Logo 2 */
+.logo2 img {
+  height: 40px;
+}
+
+/* Navigation Menu */
+.main-menu nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.main-menu nav ul li {
+  position: relative;
+}
+
+.main-menu nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 8px 0;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.main-menu nav ul li a:hover {
+  color: #007bff;
+}
+
+/* Dropdown submenu */
+.main-menu nav ul li ul.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 10px 0;
+  min-width: 180px;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.main-menu nav ul li:hover ul.submenu {
+  display: block;
+}
+
+.main-menu nav ul li ul.submenu li {
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu nav ul li ul.submenu li a {
+  padding: 8px 20px;
+  color: #555;
+  display: block;
+  font-weight: normal;
+}
+
+.main-menu nav ul li ul.submenu li a:hover {
+  background-color: #f1f1f1;
+  color: #007bff;
+}
+
+/* Search form */
+.search-form {
+  position: relative;
+}
+
+.search-form i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 16px;
+}
+
+.search-form input[type="search"] {
+  padding: 8px 10px 8px 30px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  width: 200px;
+  transition: border-color 0.3s ease;
+}
+
+.search-form input[type="search"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .main-menu {
+    display: none; /* Hide desktop menu on smaller screens */
+  }
+}
+
+@media (max-width: 767px) {
+  .header-info-right ul {
+    display: none; /* Hide sign-in button on very small screens or handle via mobile menu */
+  }
+  .header-social {
+    display: none;
+  }
+  .search-form {
+    display: none;
+  }
+}
+
+/* Mobile menu - you can add your custom JS or CSS to handle this */
+.mobile_menu {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .mobile_menu {
+    display: block;
+  }
+}
 
 
 
@@ -217,12 +438,12 @@ body {
   grid-template-rows: repeat(6, 0.5fr);
 }
 
-.post-grid{
+/* .post-grid{
          display: grid;
          gap: 10px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 0.5fr);
-}
+} */
 .post-grid-1{
     grid-column: 1/2;
     grid-row: 2/5;
@@ -356,13 +577,272 @@ body {
 }
 
 
+/* container two new edit */
+
+/* Container & Layout */
+.custom-container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Section Header */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.section-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.section-header a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+}
+
+/* Grid of Posts */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Post Styles */
+.technology-post {
+  background: #f9f9f9;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.properties-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.video-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.video-icon .btn-icon i {
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 10px;
+  border-radius: 50%;
+}
+
+/* Text Content */
+.properties-caption {
+  padding: 15px;
+}
+
+.properties-caption span {
+  display: inline-block;
+  font-size: 14px;
+  color: #ff5a5f;
+  margin-bottom: 6px;
+}
+
+.properties-caption h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.properties-caption a {
+  text-decoration: none;
+  color: #333;
+}
+
+.properties-caption p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Sidebar Ad */
+.sidebar-ad img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 6px;
+}
 
 
 
 
 
+/* blog section container 3 */
+
+.blog-section {
+  /* background-color: #f9f9f9; */
+  padding: 60px 20px;
+}
+
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.blog-subtitle {
+  text-transform: uppercase;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.blog-title {
+  margin: 0;
+  font-size: 28px;
+  color: #333;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.blog-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-image {
+  position: relative;
+}
+
+.blog-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blog-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+.blog-stats {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.search-icon i {
+  background: #007bff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.blog-content {
+  padding: 20px;
+  color: #333;
+}
+
+.blog-content h4 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.blog-content p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.blog-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.blog-btn:hover {
+  background-color: #0056b3;
+}
 
 
+
+
+/* footer */
+footer{
+    background: black;
+     padding: 40px 0;
+     color: white;
+}
+.footer-content{
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+.footer-section ul li {
+  margin-bottom: 6px;
+  color: white;
+}
+
+.footer-section ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #007bff;
+}
 
 
 

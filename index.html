@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Megasis - Home</title>
-  <link rel="stylesheet" href="css/style.css"> 
+  <!-- <link rel="stylesheet" href="css/style.css">  -->
   <link rel="stylesheet" href="css/home.css">
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,55 +12,77 @@
 </head>
 <body>
 
-<!-- Top Bar --><div class="wrapper">
-<div class="top-nav">
-  <div class="container" style="display: flex; justify-content: space-between; align-items: center;   width: 90%; ">
-    <a href="#" class="navbar-brand">Megasis</a>
-    <!-- Left: Auth Links -->
-   
-    <!-- Right: Social Icons -->
-    <div class="top-nav-social" style="display: flex; gap: 15px; idth: 90%;   margin: 30px auto;">
-      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://linkedin.com" target="_blank"><i class="fab fa-"></i></a>
+<header>
+  <div class="header-area">
+    <div class="main-header">
+
+      <div class="header-top">
+        
+            <div class="header-info-mid">
+              <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+              </div>
+            </div>
+
+            <div class="header-info-right">
+                <div class="header-social">
+                  <a href="https://www.fb.com/sai4ull"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                  <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <ul>
+                  <li><a href="login.html" class="header-btn">Sign in</a></li>
+                </ul>
+            </div>
+
+      </div>
+
+      <div class="header-bottom">
+        <div class="header-container">
+          <div class="bottom-wrap">
+            <div class="logo2">
+              <!-- <a href="index.html"><img src="assets/img/logo/logo.png" alt="Logo"></a> -->
+            </div>
+            <div class="main-menu">
+              <nav>
+                <ul id="navigation">
+                  <li><a href="index.html">Home</a></li>
+                  <li class="has-submenu">
+                    <a href="#">Page</a>
+                    <ul class="submenu">
+                      <li><a href="blog.html">Blog</a></li>
+                      <li><a href="blog_details.html">Blog Details</a></li>
+                      <li><a href="post_details.html">Post Details</a></li>
+                      <li><a href="category.html">Category</a></li>
+                      <li><a href="elements.html">Element</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="category.html">Science</a></li>
+                  <li><a href="category.html">Technology</a></li>
+                  <li><a href="category.html">Beauty</a></li>
+                  <li><a href="category.html">Health</a></li>
+                  <li><a href="category.html">Arts &amp; Culture</a></li>
+                  <li><a href="category.html">Opinion</a></li>
+                  <li><a href="category.html">Videos</a></li>
+                  <li><a href="category.html">Gallery</a></li>
+                </ul>
+              </nav>
+            </div>
+            <form class="search-form" action="#">
+              <i class="ti-search"></i>
+              <input type="search" placeholder="Search Here" title="Search here">
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-
   </div>
-  <hr style="height: 1px; width: 98%;  margin: 30px auto;  border-radius: 2px;  ">
-</div>
+</header>
 
-<!-- Main Navbar -->
-<nav class="navbar">
-  <div class="container">
-    
-    <ul class="navbar-menu">
-      <li><a href="index.html">Home</a></li>
-
-      <li class="dropdown">
-  <a href="#" id="pageDropdownToggle">Page ▾</a>
-  <ul class="dropdown-menu">
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="team.html">Our Team</a></li>
-    <li><a href="faq.html">FAQs</a></li>
-  </ul>
-</li>
-
-
-      <li><a href="science.html">Science</a></li>
-      <li><a href="technology.html">Technology</a></li>
-      <li><a href="beauty.html">Beauty</a></li>
-      <li><a href="health.html">Health</a></li>
-      <li><a href="arts.html">Arts & Culture</a></li>
-      <li><a href="opinion.html">Opinion</a></li>
-      <li><a href="video.html">Video</a></li>
-      <li><a href="wildlife_gallery.html">Gallery</a></li>
-    </ul>
-  </div>
-</nav>
-<hr class="custom-hr">
-</div>
 
 <!-- Post Cards -->
 
@@ -120,112 +142,182 @@
             </div>
         </div>
     </div>
+
 <hr class="custom-hr">
 
  
 
  <!-- container-2 -->
-     <div class="container-2 container-1">
-    <!-- Main Posts -->
-    <main class="posts-grid">
-      <div class="post-grid-1 post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image" />
-        <div class="content">
-          <h5>Politics in 2025</h5>
-          <p class="text-muted">July 30, 2025 by Admin</p>
-          <p>Quick recap of the major political changes and reforms in recent months...</p>
-          <a href="post_details.html" class="btn">Read More</a>
-        </div>
-      </div>
-      <div class="post-grid-2 post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image" />
-        <div class="content">
-          <h5>Tech Advances</h5>
-          <p class="text-muted">July 28, 2025 by Tech Editor</p>
-          <p>Explore the future of AI, robotics, and smart devices shaping industries...</p>
-          <a href="post_details.html" class="btn">Read More</a>
-        </div>
-      </div>
-      
-  <div class="post-grid-3 post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image" />
-        <div class="content">
-          <h5>Tech Advances</h5>
-          <p class="text-muted">July 28, 2025 by Tech Editor</p>
-          <p>Explore the future of AI, robotics, and smart devices shaping industries...</p>
-          <a href="post_details.html" class="btn">Read More</a>
-        </div>
+     <section class="technology-area">
+  <div class="custom-container">
+    <div class="main-content">
+      <div class="section-header">
+        <h2>Arts &amp; Culture</h2>
+        <a href="#">See All</a>
       </div>
 
-        <div class="post-grid-4 post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image" />
-        <div class="content">
-          <h5>Tech Advances</h5>
-          <p class="text-muted">July 28, 2025 by Tech Editor</p>
-          <p>Explore the future of AI, robotics, and smart devices shaping industries...</p>
-          <a href="post_details.html" class="btn">Read More</a>
+      <div class="post-grid">
+        <!-- Post 1 -->
+        <div class="technology-post">
+          <div class="technology-wrapper">
+            <div class="properties-img">
+              <a href="post_details.html">
+                <img src="images/pexels-pablo-2151867196-32783557.jpg" alt="Culture 1">
+              </a>
+            </div>
+            <div class="properties-caption">
+              <span>Health</span>
+              <h3><a href="post_details.html">Substituting ‘follow your passion’ with ‘find your purpose’</a></h3>
+              <p>by <a href="#">Pete Sariya</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="technology-post">
+          <div class="technology-wrapper">
+            <div class="properties-img">
+              <a href="post_details.html">
+                <img src="images/pexels-pablo-2151867196-32783557.jpg" alt="Culture 2">
+              </a>
+            </div>
+            <div class="properties-caption">
+              <span>Culture</span>
+              <h3><a href="post_details.html">Ibuprofen should not be used for managing symptoms</a></h3>
+              <p>by <a href="#">Pete Sariya</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="technology-post">
+          <div class="technology-wrapper">
+            <div class="properties-img">
+              <a href="post_details.html">
+                <img src="images/pexels-pablo-2151867196-32783557.jpg" alt="Culture 3">
+              </a>
+              <div class="video-icon">
+                <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0">
+                  <!-- <i class="fas fa-play"></i> -->
+                </a>
+              </div>
+            </div>
+            <div class="properties-caption">
+              <span>Video</span>
+              <h3><a href="post_details.html">Fearing corona recession, France announces</a></h3>
+              <p>by <a href="#">Pete Sariya</a></p>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+
+    <div class="sidebar-ad">
+      <a href="#"><img src="images/pexels-pablo-2151867196-32783557.jpg" alt="Ad"></a>
+    </div>
+  </div>
+</section>
+
     <!-- Sidebar -->
 
 
       <!-- Add more widgets here if you want -->
-    </aside>
-    </main>
-  </div>
+    
   
   <hr class="custom-hr">
 
 
 <!-- container 3 -->
-      <div class="container-3 container-1">
-    <!-- Main Posts -->
-    <main class="post-grid">
-      <div class="post-grid-1 post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image" />
-        <div class="content">
-          <h5>Politics in 2025</h5>
-          <p class="text-muted">July 30, 2025 by Admin</p>
-          <p>Quick recap of the major political changes and reforms in recent months...</p>
-          <a href="post_details.html" class="btn">Read More</a>
+     <div class="blog-section">
+  <div class="blog-container">
+    <div class="blog-header">
+      <h5 class="blog-subtitle">Latest News</h5>
+      <h1 class="blog-title">Help today because tomorrow you may be the one who needs more helping!</h1>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="images/pexels-pablo-2151867196-32783557.jpg" alt="Blog 1">
+          <div class="blog-info">
+            <span><i class="fa fa-clock"></i> Dec 01.2024</span>
+            <div class="blog-stats">
+              <span>3 <i class="fa fa-heart"></i></span>
+              <a href="#">0 <i class="fa fa-comment"></i></a>
+            </div>
+          </div>
+          <div class="search-icon">
+            <a href="images/pexels-pablo-2151867196-32783557.jpg" data-lightbox="Blog-1"><i class="fas fa-search-plus"></i></a>
+          </div>
+        </div>
+        <div class="blog-content">
+          <h4>Save The Topic Forests</h4>
+          <p>Lorem ipsum dolor sit amet consectur adip sed eiusmod amet consectur adip sed eiusmod tempor.</p>
+          <a class="blog-btn" href="#">Read More</a>
         </div>
       </div>
-      <div class="post-grid-2 post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image" />
-        <div class="content">
-          <h5>Tech Advances</h5>
-          <p class="text-muted">July 28, 2025 by Tech Editor</p>
-          <p>Explore the future of AI, robotics, and smart devices shaping industries...</p>
-          <a href="post_details.html" class="btn">Read More</a>
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="images/pexels-pablo-2151867196-32783557.jpg" alt="Blog 2">
+          <div class="blog-info">
+            <span><i class="fa fa-clock"></i> Dec 01.2024</span>
+            <div class="blog-stats">
+              <span>3 <i class="fa fa-heart"></i></span>
+              <a href="#">0 <i class="fa fa-comment"></i></a>
+            </div>
+          </div>
+          <div class="search-icon">
+            <a href="images/pexels-pablo-2151867196-32783557.jpg" data-lightbox="Blog-2"><i class="fas fa-search-plus"></i></a>
+          </div>
+        </div>
+        <div class="blog-content">
+          <h4>Save The Topic Forests</h4>
+          <p>Lorem ipsum dolor sit amet consectur adip sed eiusmod amet consectur adip sed eiusmod tempor.</p>
+          <a class="blog-btn" href="#">Read More</a>
         </div>
       </div>
-      
-  <div class="post-grid-3 post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image" />
-        <div class="content">
-          <h5>Tech Advances</h5>
-          <p class="text-muted">July 28, 2025 by Tech Editor</p>
-          <p>Explore the future of AI, robotics, and smart devices shaping industries...</p>
-          <a href="post_details.html" class="btn">Read More</a>
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="images/pexels-pablo-2151867196-32783557.jpg" alt="Blog 3">
+          <div class="blog-info">
+            <span><i class="fa fa-clock"></i> Dec 01.2024</span>
+            <div class="blog-stats">
+              <span>3 <i class="fa fa-heart"></i></span>
+              <a href="#">0 <i class="fa fa-comment"></i></a>
+            </div>
+          </div>
+          <div class="search-icon">
+            <a href="images/pexels-pablo-2151867196-32783557.jpg" data-lightbox="Blog-3"><i class="fas fa-search-plus"></i></a>
+          </div>
+        </div>
+        <div class="blog-content">
+          <h4>Save The Topic Forests</h4>
+          <p>Lorem ipsum dolor sit amet consectur adip sed eiusmod amet consectur adip sed eiusmod tempor.</p>
+          <a class="blog-btn" href="#">Read More</a>
         </div>
       </div>
-
-        <div class="post-grid-5 post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image" />
-        <div class="content">
-          <h5>Tech Advances</h5>
-          <p class="text-muted">July 28, 2025 by Tech Editor</p>
-          <p>Explore the future of AI, robotics, and smart devices shaping industries...</p>
-          <a href="post_details.html" class="btn">Read More</a>
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="images/pexels-pablo-2151867196-32783557.jpg" alt="Blog 4">
+          <div class="blog-info">
+            <span><i class="fa fa-clock"></i> Dec 01.2024</span>
+            <div class="blog-stats">
+              <span>3 <i class="fa fa-heart"></i></span>
+              <a href="#">0 <i class="fa fa-comment"></i></a>
+            </div>
+          </div>
+          <div class="search-icon">
+            <a href="images/pexels-pablo-2151867196-32783557.jpg" data-lightbox="Blog-4"><i class="fas fa-search-plus"></i></a>
+          </div>
+        </div>
+        <div class="blog-content">
+          <h4>Save The Topic Forests</h4>
+          <p>Lorem ipsum dolor sit amet consectur adip sed eiusmod amet consectur adip sed eiusmod tempor.</p>
+          <a class="blog-btn" href="#">Read More</a>
         </div>
       </div>
-    <!-- Sidebar -->
-
-
-      <!-- Add more widgets here if you want -->
-    </aside>
-    </main>
+    </div>
   </div>
+</div>
 
 
  <hr class="custom-hr">
@@ -284,50 +376,96 @@
 
 
 <!-- container 6 -->
- <div class="container-3 container-1">
-    <!-- Main Posts -->
-    <main class="post-grid">
-      <div class="post-grid-1 post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image" />
-        <div class="content">
-          <h5>Politics in 2025</h5>
-          <p class="text-muted">July 30, 2025 by Admin</p>
-          <p>Quick recap of the major political changes and reforms in recent months...</p>
-          <a href="post_details.html" class="btn">Read More</a>
+ <div class="blog-section" style="background-color: black">
+  <div class="blog-container">
+    <div class="blog-header">
+      <h5 class="blog-subtitle">Latest News</h5>
+      <h1 class="blog-title">Help today because tomorrow you may be the one who needs more helping!</h1>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="images/pexels-pablo-2151867196-32783557.jpg" alt="Blog 1">
+          <div class="blog-info">
+            <span><i class="fa fa-clock"></i> Dec 01.2024</span>
+            <div class="blog-stats">
+              <span>3 <i class="fa fa-heart"></i></span>
+              <a href="#">0 <i class="fa fa-comment"></i></a>
+            </div>
+          </div>
+          <div class="search-icon">
+            <a href="images/pexels-pablo-2151867196-32783557.jpg" data-lightbox="Blog-1"><i class="fas fa-search-plus"></i></a>
+          </div>
+        </div>
+        <div class="blog-content">
+          <h4>Save The Topic Forests</h4>
+          <p>Lorem ipsum dolor sit amet consectur adip sed eiusmod amet consectur adip sed eiusmod tempor.</p>
+          <a class="blog-btn" href="#">Read More</a>
         </div>
       </div>
-      <div class="post-grid-2 post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image" />
-        <div class="content">
-          <h5>Tech Advances</h5>
-          <p class="text-muted">July 28, 2025 by Tech Editor</p>
-          <p>Explore the future of AI, robotics, and smart devices shaping industries...</p>
-          <a href="post_details.html" class="btn">Read More</a>
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="images/pexels-pablo-2151867196-32783557.jpg" alt="Blog 2">
+          <div class="blog-info">
+            <span><i class="fa fa-clock"></i> Dec 01.2024</span>
+            <div class="blog-stats">
+              <span>3 <i class="fa fa-heart"></i></span>
+              <a href="#">0 <i class="fa fa-comment"></i></a>
+            </div>
+          </div>
+          <div class="search-icon">
+            <a href="images/pexels-pablo-2151867196-32783557.jpg" data-lightbox="Blog-2"><i class="fas fa-search-plus"></i></a>
+          </div>
+        </div>
+        <div class="blog-content">
+          <h4>Save The Topic Forests</h4>
+          <p>Lorem ipsum dolor sit amet consectur adip sed eiusmod amet consectur adip sed eiusmod tempor.</p>
+          <a class="blog-btn" href="#">Read More</a>
         </div>
       </div>
-      
-  <div class="post-grid-3 post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image" />
-        <div class="content">
-          <h5>Tech Advances</h5>
-          <p class="text-muted">July 28, 2025 by Tech Editor</p>
-          <p>Explore the future of AI, robotics, and smart devices shaping industries...</p>
-          <a href="post_details.html" class="btn">Read More</a>
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="images/pexels-pablo-2151867196-32783557.jpg" alt="Blog 3">
+          <div class="blog-info">
+            <span><i class="fa fa-clock"></i> Dec 01.2024</span>
+            <div class="blog-stats">
+              <span>3 <i class="fa fa-heart"></i></span>
+              <a href="#">0 <i class="fa fa-comment"></i></a>
+            </div>
+          </div>
+          <div class="search-icon">
+            <a href="images/pexels-pablo-2151867196-32783557.jpg" data-lightbox="Blog-3"><i class="fas fa-search-plus"></i></a>
+          </div>
+        </div>
+        <div class="blog-content">
+          <h4>Save The Topic Forests</h4>
+          <p>Lorem ipsum dolor sit amet consectur adip sed eiusmod amet consectur adip sed eiusmod tempor.</p>
+          <a class="blog-btn" href="#">Read More</a>
         </div>
       </div>
-
-        <div class="post-grid-5 post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image" />
-        <div class="content">
-          <h5>Tech Advances</h5>
-          <p class="text-muted">July 28, 2025 by Tech Editor</p>
-          <p>Explore the future of AI, robotics, and smart devices shaping industries...</p>
-          <a href="post_details.html" class="btn">Read More</a>
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="images/pexels-pablo-2151867196-32783557.jpg" alt="Blog 4">
+          <div class="blog-info">
+            <span><i class="fa fa-clock"></i> Dec 01.2024</span>
+            <div class="blog-stats">
+              <span>3 <i class="fa fa-heart"></i></span>
+              <a href="#">0 <i class="fa fa-comment"></i></a>
+            </div>
+          </div>
+          <div class="search-icon">
+            <a href="images/pexels-pablo-2151867196-32783557.jpg" data-lightbox="Blog-4"><i class="fas fa-search-plus"></i></a>
+          </div>
+        </div>
+        <div class="blog-content">
+          <h4>Save The Topic Forests</h4>
+          <p>Lorem ipsum dolor sit amet consectur adip sed eiusmod amet consectur adip sed eiusmod tempor.</p>
+          <a class="blog-btn" href="#">Read More</a>
         </div>
       </div>
-    
-    </main>
+    </div>
   </div>
+</div>
 
 
 <hr class="custom-hr">
@@ -336,7 +474,7 @@
     <!-- Main Posts -->
     <main class="post-grid">
       <div class="post-grid-1 post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image" />
+        <img src="images/pexels-pablo-2151867196-32783557.jpg" alt="News image" />
         <div class="content">
           <h5>Politics in 2025</h5>
           <p class="text-muted">July 30, 2025 by Admin</p>
@@ -345,7 +483,7 @@
         </div>
       </div>
       <div class="post-grid-2 post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image" />
+        <img src="images/pexels-pablo-2151867196-32783557.jpg" alt="News image" />
         <div class="content">
           <h5>Tech Advances</h5>
           <p class="text-muted">July 28, 2025 by Tech Editor</p>
@@ -355,7 +493,7 @@
       </div>
       
   <div class="post-grid-3 post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image" />
+        <img src="images/pexels-pablo-2151867196-32783557.jpg" alt="News image" />
         <div class="content">
           <h5>Tech Advances</h5>
           <p class="text-muted">July 28, 2025 by Tech Editor</p>
@@ -365,7 +503,7 @@
       </div>
 
         <div class="post-grid-5 post-card">
-        <img src="https://via.placeholder.com/400x200" alt="News image" />
+        <img src="images/pexels-pablo-2151867196-32783557.jpg" alt="News image" />
         <div class="content">
           <h5>Tech Advances</h5>
           <p class="text-muted">July 28, 2025 by Tech Editor</p>
